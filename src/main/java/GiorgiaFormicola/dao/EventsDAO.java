@@ -34,6 +34,6 @@ public class EventsDAO {
         transaction.begin();
         entityManager.remove(eventFound);
         transaction.commit();
-        System.out.println("The event " + eventFound.getTitle() + " has been removed successfully!");
+        System.out.println("The event " + eventFound.getTitle() + " has been deleted successfully!");
     }
 }
