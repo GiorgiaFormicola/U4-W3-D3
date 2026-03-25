@@ -27,7 +27,7 @@ public class PeopleDAO {
         if (found == null) throw new NotFoundException(id);
         return found;
     }
-    
+
     public void delete(String id) {
         Person found = this.getById(id);
         EntityTransaction transaction = entityManager.getTransaction();
