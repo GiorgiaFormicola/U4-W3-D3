@@ -39,12 +39,13 @@ public class Event {
     }
 
     //CONSTRUCTOR FOR JAVA
-    public Event(String title, int year, int month, int day, String description, EventType eventType, int maxNumberOfParticipants) {
+    public Event(String title, int year, int month, int day, String description, EventType eventType, int maxNumberOfParticipants, Location location) {
         this.title = title;
         this.eventDate = LocalDate.of(year, month, day);
         this.description = description;
         this.eventType = eventType;
         this.maxNumberOfParticipants = maxNumberOfParticipants;
+        this.location = location;
     }
 
     //GETTERS
