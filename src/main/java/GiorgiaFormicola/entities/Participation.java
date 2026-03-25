@@ -32,8 +32,6 @@ public class Participation {
     protected Participation() {
     }
 
-    ;
-
     //CONSTRUCTOR FOR JAVA
     public Participation(Event event, Person person, StateType state) {
         this.event = event;

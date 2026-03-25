@@ -4,6 +4,8 @@ import GiorgiaFormicola.enums.GenderType;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -24,6 +26,10 @@ public class Person {
     @Column(length = 1)
     @Enumerated(EnumType.STRING)
     private GenderType gender;
+
+    //RELATION WITH PARTICIPATION
+    @OneToMany(mappedBy = "person")
+    private List<Participation> participationsList = new ArrayList<>();
 
     //CONSTRUCTOR FOR DB
     protected Person() {
@@ -64,6 +70,10 @@ public class Person {
         return birthDate;
     }
 
+    public List<Participation> getParticipationsList() {
+        return participationsList;
+    }
+
     //SETTERS
 
     public GenderType getGender() {
@@ -73,6 +83,7 @@ public class Person {
     public void setGender(GenderType gender) {
         this.gender = gender;
     }
+
 
     //TO STRING
 
@@ -85,6 +96,7 @@ public class Person {
                 ", email='" + email + '\'' +
                 ", birthDate=" + birthDate +
                 ", gender=" + gender +
+                ", attendees=" + participationsList +
                 '}';
     }
 }
