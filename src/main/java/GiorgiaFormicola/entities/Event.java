@@ -9,6 +9,7 @@ import java.util.UUID;
 @Entity
 @Table(name = "events")
 public class Event {
+    //ATTRIBUTES
     @Id
     @GeneratedValue
     private UUID id;
@@ -28,6 +29,11 @@ public class Event {
     @Column(name = "maximum_participants")
     private int maxNumberOfParticipants;
 
+    //RELATION WITH LOCATION
+    @ManyToOne
+    @JoinColumn(name = "location_id")
+    private Location location;
+
     //CONSTRUCTOR FOR DB
     public Event() {
     }
@@ -40,7 +46,6 @@ public class Event {
         this.eventType = eventType;
         this.maxNumberOfParticipants = maxNumberOfParticipants;
     }
-
 
     //GETTERS
     public UUID getId() {
@@ -72,6 +77,14 @@ public class Event {
         this.description = description;
     }
 
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
     public EventType getEventType() {
         return eventType;
     }
@@ -88,6 +101,7 @@ public class Event {
         this.maxNumberOfParticipants = maxNumberOfParticipants;
     }
 
+    //TO STRING
     @Override
     public String toString() {
         return "Event{" +
