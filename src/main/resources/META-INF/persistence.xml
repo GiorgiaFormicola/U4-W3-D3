@@ -5,6 +5,7 @@
     <persistence-unit name="events_management_pu">
         <class>GiorgiaFormicola.entities.Event</class>
         <class>GiorgiaFormicola.entities.Location</class>
+        <class>GiorgiaFormicola.entities.Person</class>
         <properties>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/events_management"/>
             <property name="jakarta.persistence.jdbc.user" value="postgres"/>

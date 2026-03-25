@@ -11,9 +11,9 @@ public class Location {
     @Id
     @GeneratedValue
     private UUID id;
-    @Column(length = 30)
+    @Column(length = 30, nullable = false)
     private String name;
-    @Column(length = 30)
+    @Column(length = 30, nullable = false)
     private String city;
 
     //CONSTRUCTOR FOR DB

@@ -31,7 +31,7 @@ public class Event {
 
     //RELATION WITH LOCATION
     @ManyToOne
-    @JoinColumn(name = "location_id")
+    @JoinColumn(name = "location_id", nullable = false)
     private Location location;
 
     //CONSTRUCTOR FOR DB
@@ -102,6 +102,7 @@ public class Event {
     }
 
     //TO STRING
+
     @Override
     public String toString() {
         return "Event{" +
@@ -111,6 +112,7 @@ public class Event {
                 ", description='" + description + '\'' +
                 ", eventType=" + eventType +
                 ", maxNumberOfParticipants=" + maxNumberOfParticipants +
+                ", location=" + location +
                 '}';
     }
 }
