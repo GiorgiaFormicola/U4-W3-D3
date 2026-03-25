@@ -6,6 +6,14 @@ import jakarta.persistence.*;
 
 import java.util.UUID;
 
+/*@Entity
+@Table(
+        name = "partecipazioni",
+        uniqueConstraints = {
+                @UniqueConstraint(columnNames = {"evento_id", "persona_id"})
+        }
+)*/
+
 @Entity
 @Table(name = "participations")
 public class Participation {

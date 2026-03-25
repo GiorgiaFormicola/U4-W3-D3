@@ -96,7 +96,6 @@ public class Person {
                 ", email='" + email + '\'' +
                 ", birthDate=" + birthDate +
                 ", gender=" + gender +
-                ", attendees=" + participationsList +
                 '}';
     }
 }

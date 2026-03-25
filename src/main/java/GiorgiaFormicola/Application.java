@@ -52,6 +52,13 @@ public class Application {
         Participation participation1 = new Participation(event1FromDB, person1FromDB, StateType.PENDING);
         /*participationsDAO.save(participation1);*/
 
-        System.out.println("Hello World!");
+        //READS DATA FROM DB
+        Participation participation1FromDB = participationsDAO.getById("9c4ea84f-6bce-4436-8603-41adb9cdfbe5");
+
+        /*System.out.println(location1FromDB);*/
+        /*System.out.println(event1FromDB);*/
+        /*System.out.println(person1FromDB);
+        person1FromDB.getParticipationsList().forEach(System.out::println);*/
+        System.out.println(participation1FromDB);
     }
 }
